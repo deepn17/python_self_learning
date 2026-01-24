@@ -17,8 +17,33 @@ def divide(a, b):
         return "Cannot divide by Zero"
     return a / b
 
-print(add(2,3))
-print(subtract(5, 2))
-print(multiply(7, 3))
-print(divide(7, 0))
-print(divide(9, 3))
+def show_menu():
+    print("\n Calculator Menu")
+    print("1. Add")
+    print("2. Subtract")
+    print("3. Multiply")
+    print("4. Divide")
+    print("5. Exit")
+
+
+while True:
+    show_menu()
+    choice = input("Choose an option (1-5): ")
+
+    if choice == '5':
+        print("Goodbye!")
+        break
+
+    a = float(input("Enter the first number: "))
+    b = float(input("Enter the second number: "))
+
+    if choice == '1':
+        print("Result:", add(a, b))
+    elif choice == '2':
+        print("Result:", subtract(a, b))
+    elif choice == '3':
+        print("Result:", multiply(a, b))
+    elif choice == '4':
+        print("Result:", divide(a, b))
+    else:
+        print("Invalid choice")
